@@ -1,0 +1,118 @@
+/* ==UserStyle==
+@name			Hydro/vijos美化
+@namespace		https://hydro.ac
+@author			Leo2011
+@description 	给开源Vijos(vj4)和Hydro(vj5)等OJ圆角并改了个背景
+@version        5.0.0
+@license      	CC-BY-NC-SA-4.0
+@preprocessor 	uso
+@advanced dropdown backpic "背景图片" {
+    bg0 "macOS Monterey（默认）*" <<<EOT https://pic.imgdb.cn/item/62df71a5f54cd3f9376f351d.jpg EOT;
+	bg1 "晶钻" <<<EOT http://www.pptbz.com/d/file/p/201708/a1d07b6201af8f574b6539cb724bbc16.png EOT;
+    bg2 "云端之上" <<<EOT https://i.loli.net/2020/02/21/9uHQ2rLmTvkFtMj.png EOT;
+    bg3 "一个动漫壁纸" <<<EOT https://c-ssl.duitang.com/uploads/item/201503/14/20150314184557_aPEfj.jpeg EOT;
+    bg4 "随机背景" <<<EOT https://picsum.photos/1920/1080 EOT;
+    bg5 "随机背景（高斯模糊）" <<<EOT https://picsum.photos/1920/1080?blur=10 EOT;
+    bg6 "我想使用纯色背景" <<<EOT  EOT;
+	bg7 "Vijos" <<<EOT https://i.loli.net/2019/08/01/5d42d1bb1b30749952.png EOT;
+	bg8 "自定义（请使用图床）" <<<EOT /*[[backpic-custom]]*\/ EOT;
+}
+@advanced text backpic-custom "背景图片 (请先选择自定义模式)" "https://example.com/image.png"
+@advanced color bg-color "纯色背景颜色（先选择纯色背景）" #F7F7F7
+@advanced dropdown bgping "固定背景不随页面滚动" {
+    bgping1 "开启*" <<<EOT background-attachment: fixed; EOT;
+    bgping2 "关闭" <<<EOT /* background-attachment: fixed; *\/ EOT;
+}
+@advanced text per "透明度（0为完全透明，1为不透明，默认为0.95，推荐为0.9~1之间）" "0.95"
+==/UserStyle== */
+@-moz-document domain("hydro.ac")，
+domain("yundouxueyuan.com")，
+domain("oiclass.com")，
+domain("vijos.org")，
+domain("wonderland.run")，
+domain("wonderpython.run") {
+	。main {
+		background-image: url(/*[[backpic]]*/) !important;
+		/*把这链接改成你想要的背景吧~记得开图床哟~Change the URL To Your Background!*/
+		background-color: /*[[bg-color]]*/
+		!important;
+		background-size: cover !important;
+		/*[[bgping]]*/
+	}
+	。section {
+		border-radius: 10px;
+	}
+	。button,
+	。dropdown .menu {
+		border-radius: 10px;
+	}
+	body {
+		font-family: -apple-system, BlinkMacSystemFont, "San Francisco Display", "San Francisco", "Helvetica Neue", "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK", "Source Han Sans", "PingFang SC", "Segoe UI", "Microsoft YaHei"， sans-serif;
+	}
+	。user-profile-badge {
+		border-radius: 7px;
+		box-shadow: 0px 1px 3px #656565;
+	}
+	data-tooltip,
+	。data-tooltip,
+	span.time.relative.tooltip {
+		border-radius: 10px;
+	}
+	input.textbox,
+	textarea.textbox,
+	time relative tooltip drop-target drop-element-attached-bottom drop-element-attached-center drop-target-attached-top drop-target-attached-center {
+		border-radius: 10px;
+	}
+	.search > input {
+		border-radius: 10px 0px 0px 0px;
+	}
+	.search > button {
+		border-radius: 0px 10px 0px 0px;
+	}
+	.bp4-tag.bp4-minimal:not([class *= bp4-intent-]) {
+		border-radius: 10px;
+	}
+	。problem__tag-link,
+	。select-container.compact .select，
+	。select.compact {
+		border-radius: 10px;
+	}
+	pre[class *= language-],
+	.autocomplete-wrapper {
+		border-radius: 10px;
+	}
+	.section__table-header {
+		border-radius: 10px 10px 0 0;
+	}
+	div.code-toolbar > .toolbar > .toolbar-item > a,
+	div.code-toolbar > .toolbar > .toolbar-item > button,
+	div.code-toolbar > .toolbar > .toolbar-item > span {
+		border-radius: 0 0 0 10px;
+	}
+	.contest-sidebar__bg {
+		border-radius: 7px 7px 0 0;
+	}
+	blockquote {
+		border-radius: 7px;
+		box-shadow: 2px 3px 3px #aaa;
+	}
+	#status > .section__header {
+		padding: 0.78125rem .9375rem;
+	}
+	#app > .main-container > .header-layout.tiny[data-v-7958fe72] {
+		height: 60px;
+		z-index: 999;
+		margin-left: -10%;
+		padding-left: 10%;
+		background-color: #ffffff4a !important;
+		-webkit-backdrop-filter: blur(10px) !important;
+		backdrop-filter: blur(10px) !important;
+		font-weight: bolder;
+	}
+	.columns {
+		opacity: /*[[per]]*/;
+	}
+	。slideout-menu {
+		opacity: /*[[per]]*/;
+	}
+}
