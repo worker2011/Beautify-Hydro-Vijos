@@ -25,13 +25,13 @@
 }
 @advanced text per "透明度（0为完全透明，1为不透明，默认为0.95，推荐为0.9~1之间）" "0.95"
 ==/UserStyle== */
-@-moz-document domain("hydro.ac")，
-domain("yundouxueyuan.com")，
-domain("oiclass.com")，
-domain("vijos.org")，
-domain("wonderland.run")，
-domain("wonderpython.run") {
-	。main {
+@-moz-document domain("hydro.ac"),
+domain("yundouxueyuan.com"),
+domain("oiclass.com"),
+domain("vijos.org"),
+domain("wonderland.run"),
+domain("wonderpython.run"), domain("gxyzoj.com") {
+	.main {
 		background-image: url(/*[[backpic]]*/) !important;
 		/*把这链接改成你想要的背景吧~记得开图床哟~Change the URL To Your Background!*/
 		background-color: /*[[bg-color]]*/
@@ -39,22 +39,22 @@ domain("wonderpython.run") {
 		background-size: cover !important;
 		/*[[bgping]]*/
 	}
-	。section {
+	.section {
 		border-radius: 10px;
 	}
-	。button,
-	。dropdown .menu {
+	.button,
+	.dropdown .menu {
 		border-radius: 10px;
 	}
 	body {
-		font-family: -apple-system, BlinkMacSystemFont, "San Francisco Display", "San Francisco", "Helvetica Neue", "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK", "Source Han Sans", "PingFang SC", "Segoe UI", "Microsoft YaHei"， sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, "San Francisco Display", "San Francisco", "Helvetica Neue", "Noto Sans", "Noto Sans CJK SC", "Noto Sans CJK", "Source Han Sans", "PingFang SC", "Segoe UI", "Microsoft YaHei", sans-serif;
 	}
-	。user-profile-badge {
+	.user-profile-badge {
 		border-radius: 7px;
 		box-shadow: 0px 1px 3px #656565;
 	}
 	data-tooltip,
-	。data-tooltip,
+	.data-tooltip,
 	span.time.relative.tooltip {
 		border-radius: 10px;
 	}
@@ -72,9 +72,9 @@ domain("wonderpython.run") {
 	.bp4-tag.bp4-minimal:not([class *= bp4-intent-]) {
 		border-radius: 10px;
 	}
-	。problem__tag-link,
-	。select-container.compact .select，
-	。select.compact {
+	.problem__tag-link,
+	.select-container.compact .select,
+	.select.compact {
 		border-radius: 10px;
 	}
 	pre[class *= language-],
@@ -112,7 +112,7 @@ domain("wonderpython.run") {
 	.columns {
 		opacity: /*[[per]]*/;
 	}
-	。slideout-menu {
+	.slideout-menu {
 		opacity: /*[[per]]*/;
 	}
 }
