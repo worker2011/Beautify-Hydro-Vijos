@@ -3,7 +3,7 @@
 @namespace		https://hydro.ac
 @author			Leo2011
 @description 	给开源Vijos(vj4)和Hydro(vj5)等OJ圆角并改了个背景
-@version        5.0.0
+@version        5.0.1
 @license      	CC-BY-NC-SA-4.0
 @preprocessor 	uso
 @advanced dropdown backpic "背景图片" {
@@ -26,11 +26,11 @@
 @advanced text per "透明度（0为完全透明，1为不透明，默认为0.95，推荐为0.9~1之间）" "0.95"
 ==/UserStyle== */
 @-moz-document domain("hydro.ac"),
-domain("yundouxueyuan.com"),
-domain("oiclass.com"),
-domain("vijos.org"),
-domain("wonderland.run"),
-domain("wonderpython.run"), domain("gxyzoj.com") {
+domain("yundouxueyuan.com")，
+domain("oiclass.com")，
+domain("vijos.org")，
+domain("wonderland.run")，
+domain("wonderpython.run")， domain("gxyzoj.com") {
 	.main {
 		background-image: url(/*[[backpic]]*/) !important;
 		/*把这链接改成你想要的背景吧~记得开图床哟~Change the URL To Your Background!*/
